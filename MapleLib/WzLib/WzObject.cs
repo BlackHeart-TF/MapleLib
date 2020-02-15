@@ -14,12 +14,12 @@ public abstract class WzObject : IDisposable
     /// Returns the parent object
     /// </summary>
     [JsonIgnore]
-    public WzObject Parent { get; internal set; }
+    public virtual WzObject Parent { get; internal set; }
 
     /// <summary>
     /// The name of the object
     /// </summary>
-    public string Name { get; set; }
+    public virtual string Name { get; set; }
 
     /// <summary>
     /// The WzObjectType of the object

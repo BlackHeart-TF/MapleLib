@@ -1,4 +1,4 @@
-﻿using System.Drawing;
+﻿using System.DrawingCore;
 using System.IO;
 using MapleLib.WzLib.Util;
 
@@ -25,13 +25,13 @@ namespace MapleLib.WzLib.WzProperties
         {
             if (value is Point)
             {
-                x.val = ((Point) value).X;
-                y.val = ((Point) value).Y;
+                x.Value = ((Point) value).X;
+                y.Value = ((Point) value).Y;
             }
             else
             {
-                x.val = ((Size) value).Width;
-                y.val = ((Size) value).Height;
+                x.Value = ((Size) value).Width;
+                y.Value = ((Size) value).Height;
             }
         }
 
@@ -151,12 +151,12 @@ namespace MapleLib.WzLib.WzProperties
 
         public override Point GetPoint()
         {
-            return new Point(x.val, y.val);
+            return new Point(x.Value, y.Value);
         }
 
         public override string ToString()
         {
-            return "X: " + x.val + ", Y: " + y.val;
+            return "X: " + x.Value + ", Y: " + y.Value;
         }
 
         #endregion
