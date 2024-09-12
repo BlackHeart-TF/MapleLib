@@ -2,11 +2,9 @@
 
 using System.Collections.Generic;
 using System.Drawing;
-using System.IO;
 using MapleLib.Helper;
 using MapleLib.WzLib.Util;
 using Microsoft.Extensions.Logging;
-//using Point = System.Drawing.Point;
 
 namespace MapleLib.WzLib.WzProperties
 {

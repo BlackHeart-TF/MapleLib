@@ -149,15 +149,9 @@ namespace MapleLib.WzLib.WzProperties
 
         #region Cast Values
 
-        public override Point GetPoint()
-        {
-            return new Point(x.Value, y.Value);
-        }
+        public override Point GetPoint() => new Point(x.Value, y.Value);
 
-        public override string ToString()
-        {
-            return "X: " + x.Value + ", Y: " + y.Value;
-        }
+        public override string ToString() => $"X: {x.Value}, Y: {y.Value}";
 
         #endregion
     }

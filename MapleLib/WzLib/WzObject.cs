@@ -148,14 +148,12 @@ public abstract class WzObject : IDisposable
 
     public void Export(Stream stream, JsonSerializer serializer = null)
     {
-        using (var sr = new StreamWriter(stream))
-        using (var writer = new JsonTextWriter(sr))
+        using var sr = new StreamWriter(stream);
+        using var writer = new JsonTextWriter(sr);
+        serializer ??= new JsonSerializer
         {
-            serializer = serializer ?? new JsonSerializer
-            {
-                Formatting = Formatting.Indented
-            };
-            serializer.Serialize(writer, this);
-        }
+            Formatting = Formatting.Indented
+        };
+        serializer.Serialize(writer, this);
     }
 }
